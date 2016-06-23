@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.app.BankAccountTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.208 sec <<< FAILURE! - in com.mycompany.app.BankAccountTest
+withDrawalTest(com.mycompany.app.BankAccountTest)  Time elapsed: 0.086 sec  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	Assert cannot be resolved
+	expected cannot be resolved to a variable
+	actual cannot be resolved to a variable
+
+	at com.mycompany.app.BankAccountTest.withDrawalTest(BankAccountTest.java:67)
+
