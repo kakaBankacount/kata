@@ -40,9 +40,6 @@ public class Account {
 		return refNumber;
 	}
 
-	public void setRefNumber(String refNumber) {
-		this.refNumber = refNumber;
-	}
 
 	public double getBalance() {
 		return balance;

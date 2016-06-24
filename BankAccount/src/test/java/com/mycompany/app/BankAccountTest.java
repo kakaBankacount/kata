@@ -5,10 +5,6 @@ import static org.junit.Assert.fail;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Semaphore;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -27,6 +23,7 @@ import com.mycompany.app.entity.Operation;
 import com.mycompany.app.service.AccountOperationException;
 import com.mycompany.app.service.BankAccountServiceFactory;
 import com.mycompany.app.service.IBankService;
+import com.mycompany.app.service.IStatement;
 
 /**
  * Unit test for BankAccountService.
@@ -146,17 +143,12 @@ public class BankAccountTest {
 		Date endDate = new Date();
 
 		try {
-			List<Operation> operations = bankAccountService.getOperations(
-					accountRefNumber, startDate, endDate);
+			IStatement statement = bankAccountService.getOperations(accountRefNumber, startDate, endDate);
 
-			assertTrue("There should be 2 operations", operations != null
-					&& operations.size() == 2);
+			assertTrue("There should be 2 operations", statement.getOperations() != null && statement.getOperations() .size() == 2);
 
-			LOG.info("Operation list. Start date=  " + startDate
-					+ " - End date = " + endDate);
-			for (Operation op : operations) {
-				LOG.info("op: " + op);
-			}
+			LOG.info("Statement : " + statement.toString());
+			
 		} catch (AccountOperationException e) {
 			fail("Fail with message: " + e.getMessage());
 		} catch (Exception e) {

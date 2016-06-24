@@ -64,19 +64,23 @@ public class BankService implements IBankService {
 		} catch (Exception e) {
 			entityManager.getTransaction().rollback();
 			throw new AccountOperationException(e);
+		} finally {
+			if (entityManager != null) {
+				entityManager.close();
+			}
 		}
 		return operation;
 	}
 
 	@Override
-	public List<Operation> getOperations(String accountRefNumber,
+	public IStatement getOperations(String accountRefNumber,
 			Date startDate, Date endDate) throws AccountOperationException {
 		EntityManager entityManager = entityManagerFactory
 				.createEntityManager();
 
-		List<Operation> operations;
+		IStatement statement;
 		try {
-			operations = entityManager
+			List<Operation> operations = entityManager
 					.createQuery(
 							"from Operation o where o.account.refNumber = :refNumber "
 									+ "and o.operationDate >= :startDate and o.operationDate <:endDate",
@@ -85,12 +89,25 @@ public class BankService implements IBankService {
 							.setParameter("startDate", startDate)
 							.setParameter("endDate", endDate)
 							.getResultList();
+			
+			
+			Account account = entityManager
+			.createQuery("from Account where refNumber = :refNumber", Account.class)
+					.setParameter("refNumber", accountRefNumber)
+					.getSingleResult();
 
+			statement = new Statement(account, operations, startDate, endDate);
+			
 		} catch (Exception e) {
 
 			throw new AccountOperationException(e);
+		} finally {
+			if (entityManager != null) {
+				entityManager.close();
+			}
 		}
-		return operations;
+		
+		return statement;
 	}
 
 }
