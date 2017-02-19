@@ -1,4 +1,4 @@
-package com.mycompany.app.service;
+aapackage com.mycompany.app.service;
 a
 public class BankAccountServiceFactory {
 	
