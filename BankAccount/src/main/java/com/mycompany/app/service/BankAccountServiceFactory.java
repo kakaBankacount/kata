@@ -1,5 +1,5 @@
 package com.mycompany.app.service;
-a
+ab
 public class BankAccountServiceFactory {
 	
 	public static IBankService createBankAccountService() {
