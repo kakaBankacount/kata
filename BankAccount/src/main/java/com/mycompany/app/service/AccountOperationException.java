@@ -1,5 +1,5 @@
 package com.mycompany.app.service;
-abcdefghijklm
+abcdefghijklmn
 public class AccountOperationException extends Exception {
 a	
 	public AccountOperationException(String errorMessage) {
