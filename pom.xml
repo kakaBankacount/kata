@@ -3,7 +3,7 @@
 	<groupId>com.mycompany.app</groupId>
 	<artifactId>Parent</artifactId>
 	<packaging>pom</packaging>
-	<version>1.11-SNAPSHOT</version>
+	<version>1.12-SNAPSHOT</version>
 	<name>Parent-BankAccount</name>
 	<url>http://maven.apache.org</url>
 	
@@ -27,18 +27,18 @@
 	
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19.1</version>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.surefire</groupId>
-						<artifactId>surefire-junit47</artifactId>
-						<version>2.19.1</version>
-					</dependency>
-				</dependencies>
-			</plugin>
+			   <plugin>
+			          <groupId>org.apache.maven.plugins</groupId>
+			          <artifactId>maven-release-plugin</artifactId>
+			          <version>2.4.1</version>
+			          <dependencies>
+			            <dependency>
+			              <groupId>org.apache.maven.scm</groupId>
+			              <artifactId>maven-scm-api</artifactId>
+			              <version>1.7</version>
+			            </dependency>
+			          </dependencies>
+        		</plugin>
 		</plugins>
 	</build>
 </project>
