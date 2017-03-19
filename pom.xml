@@ -15,7 +15,7 @@
 	
 	  <distributionManagement>
 	    <repository>
-	      <id>myRepoId</id>
+	      <id>releases</id>
 	      <name>myCompanyReporsitory</name>
 	      <url>file://d:\m2-repo</url>
 	    </repository>
