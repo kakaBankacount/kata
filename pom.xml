@@ -3,7 +3,7 @@
 	<groupId>com.mycompany.app</groupId>
 	<artifactId>Parent</artifactId>
 	<packaging>pom</packaging>
-	<version>1.12-SNAPSHOT</version>
+	<version>1.13-SNAPSHOT</version>
 	<name>Parent-BankAccount</name>
 	<url>http://maven.apache.org</url>
 	
