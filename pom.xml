@@ -3,7 +3,7 @@
 	<groupId>com.mycompany.app</groupId>
 	<artifactId>Parent</artifactId>
 	<packaging>pom</packaging>
-	<version>1.19</version>
+	<version>1.20-SNAPSHOT</version>
 	<name>Parent-BankAccount</name>
 	<url>http://maven.apache.org</url>
 	
@@ -28,7 +28,7 @@
 	<scm>
 	   <connection>scm:git:https://github.com/katabankaccount/kata.git</connection>
 	   <url>scm:git:https://github.com/katabankaccount/kata.git</url>
-	  <tag>Parent-1.19</tag>
+	  <tag>Parent-1.16</tag>
 	</scm>
 	
 	  
