@@ -7,19 +7,31 @@
 	<name>Parent-BankAccount</name>
 	<url>http://maven.apache.org</url>
 	
+	
+<distributionManagement>
+    <repository>
+        <id>releases</id>
+        <name>releases repo</name>
+        <url>file://d:/m2-repo/releases</url>
+        <releases>
+	<enabled>true</enabled>
+      </releases>
+      <snapshots>
+	<enabled>false</enabled>
+	</snapshots>
+	<layout>default</layout>
+    </repository>
+  
+</distributionManagement>
+
+	
 	<scm>
 	   <connection>scm:git:https://github.com/katabankaccount/kata.git</connection>
 	   <url>scm:git:https://github.com/katabankaccount/kata.git</url>
 	  <tag>HEAD</tag>
 	</scm>
 	
-	  <distributionManagement>
-	    <repository>
-	      <id>releases</id>
-	      <name>myCompanyReporsitory</name>
-	      <url>file://d:\m2-repo</url>
-	    </repository>
-  	</distributionManagement>
+	  
 	
 	<modules>
 		<module>BankAccount</module>
