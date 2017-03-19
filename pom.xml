@@ -3,7 +3,7 @@
 	<groupId>com.mycompany.app</groupId>
 	<artifactId>Parent</artifactId>
 	<packaging>pom</packaging>
-	<version>1.6-SNAPSHOT</version>
+	<version>1.7-SNAPSHOT</version>
 	<name>Parent-BankAccount</name>
 	<url>http://maven.apache.org</url>
 	
@@ -19,7 +19,7 @@
 	      <name>myCompanyReporsitory</name>
 	      <url>file://d:\m2-repo</url>
 	    </repository>
-  	</distributionManagement
+  	</distributionManagement>
 	
 	<modules>
 		<module>BankAccount</module>
