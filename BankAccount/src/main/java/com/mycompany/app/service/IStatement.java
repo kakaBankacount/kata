@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.mycompany.app.entity.Operation;
-a
+
 public interface IStatement {
 	
 	String getRefAccountNumber();
