@@ -8,8 +8,8 @@
 	<url>http://maven.apache.org</url>
 	
 	<scm>
-		<connection>scm:git:https://github.com/katabankaccount/kata.git</connection>
-		<developerConnection>scm:git:https://github.com/katabankaccount/kata.git</developerConnection>
+		<connection>scm:git:git@github.com:katabankaccount/kata.git</connection>
+		<developerConnection>scm:git:git@github.com:katabankaccount/kata.git</developerConnection>
 		<tag>HEAD</tag>
 		<url>https://github.com/katabankaccount/kata.git</url>
 	</scm>
